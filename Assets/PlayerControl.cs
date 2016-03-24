@@ -23,7 +23,7 @@ public class PlayerControl : MonoBehaviour {
 		{
 			nextFire = Time.time + fireRate;
 			//GameObject clone = 
-			//Instantiate (shot, transform.position, transform.rotation) as GameObject;
+			Instantiate (shot, transform.position, transform.rotation);
 		}
 	}
 
