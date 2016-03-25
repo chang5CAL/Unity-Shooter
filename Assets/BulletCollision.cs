@@ -11,11 +11,12 @@ public class BulletCollision : MonoBehaviour {
 	void Start () {
 
 		rb2d = GetComponent<Rigidbody2D> ();
-		rb2d.velocity = transform.forward * speed;
+		rb2d.velocity = new Vector2(speed,speed);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		//rb2d.velocity = transform.forward * speed;
 		
 	}
 }
