@@ -17,13 +17,13 @@ public class EnemyController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		//if ()
 		//{
 			//While it's on screen, go forwards.
 
-		rb2d.AddForce ((player.transform.position - rb2d.transform.position) * speed);
-		//}
-	
+		if (rb2d.transform.position != player.transform.position) {
+			rb2d.AddForce ((player.transform.position - rb2d.transform.position) * speed);
+		}
 	}
 }
