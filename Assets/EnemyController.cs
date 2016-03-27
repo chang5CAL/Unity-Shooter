@@ -26,4 +26,13 @@ public class EnemyController : MonoBehaviour {
 			rb2d.AddForce ((player.transform.position - rb2d.transform.position) * speed);
 		}
 	}
+
+	void onTriggerEnter(Collider other)
+	{
+		if (other.tag == "Boundary") {
+			return;
+		}
+		Destroy (other.gameObject);
+		Destroy (gameObject);
+	}
 }
