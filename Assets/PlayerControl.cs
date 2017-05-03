@@ -22,7 +22,6 @@ public class PlayerControl : MonoBehaviour {
 		if (Input.GetButton ("Fire1") && Time.time > nextFire) 
 		{
 			nextFire = Time.time + fireRate;
-			//GameObject clone = 
 			Instantiate (shot, transform.position, transform.rotation);
 		}
 	}
